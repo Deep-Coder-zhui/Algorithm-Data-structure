@@ -1,2 +1,2 @@
-# Algorithm-Data-structure
+# Algorithm_Data-structure
 day day up
