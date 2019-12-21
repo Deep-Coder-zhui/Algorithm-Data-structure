@@ -1,8 +1,6 @@
 # 建议
 ## 不可行
 
-H^3^ is cool
-
 # <sup>slow</sup>[871. 最低加油次数](https://leetcode-cn.com/classic/problems/minimum-number-of-refueling-stops/description/)
 
 ## Tag
