@@ -1,2 +1,2 @@
 # Algorithm And Data-structure
-day day up
+talk is cheap, show me the code!
