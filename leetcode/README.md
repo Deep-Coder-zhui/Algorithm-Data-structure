@@ -22,7 +22,7 @@
         <tr>
             <th>1252</th>
             <th><a href = "https://leetcode-cn.com/classic/problems/cells-with-odd-values-in-a-matrix/description/">奇数值单元格的数目</a></th>
-            <th><a href = "">go</a>&nbsp;c++</th>
+            <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/1252.%20%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE.go">go</a>&nbsp;c++</th>
             <th>容易</th>
         </tr>
     </table>
