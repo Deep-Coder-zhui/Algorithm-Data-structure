@@ -5,8 +5,6 @@ interval[i]: 第i个加油站到前面一个站（i=0，则为起点）的距离
 dp[i][j]：到第i个加油站且共加j(最大为i+1)次油后最大还能行驶的距离（dp[i][j]=-1表示不可达）
 dp[i][j] = max{dp[i-1][j] - interval[i], dp[i-1][j-1] - interval[i][0] + stations[i][1]}
 */
-package go_version
-
 const stations_len = 505
 func minRefuelStops(target int, startFuel int, stations [][]int) int {
     interval := [stations_len]int{}

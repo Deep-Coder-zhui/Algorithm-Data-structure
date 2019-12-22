@@ -35,3 +35,25 @@ public:
         return ans;
     }
 };
+
+// 同时利用f(x, y)的两个特性，O(x + y)，函数双指针
+class Solution {
+public:
+    vector<vector<int>> findSolution(CustomFunction& customfunction, int z) {
+        vector<vector<int>> ans;
+        
+        int x = 1, y = 1000;
+        while(x <= 1000 && y >= 1) {
+            int cal = customfunction.f(x, y);
+            if(cal > z) {
+                y--;
+            } else if(cal < z) {
+                x++;
+            } else {
+                ans.push_back({x++, y--});
+            }
+        }
+
+        return ans;
+    }
+};
