@@ -23,6 +23,12 @@
             <th>1252</th>
             <th><a href = "https://leetcode-cn.com/classic/problems/cells-with-odd-values-in-a-matrix/description/">奇数值单元格的数目</a></th>
             <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/1252.%20%E5%A5%87%E6%95%B0%E5%80%BC%E5%8D%95%E5%85%83%E6%A0%BC%E7%9A%84%E6%95%B0%E7%9B%AE.go">go</a>&nbsp;c++</th>
-            <th>容易</th>
+            <th>简单</th>
+        </tr>
+        <tr>
+            <th>1297</th>
+            <th><a href = "https://leetcode-cn.com/problems/maximum-number-of-occurrences-of-a-substring/">子串的最大出现次数</a></th>
+            <th>go&nbsp;<a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/c%2B%2B/1297.%20%E5%AD%90%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0.cpp">c++</a></th>
+            <th>简单偏难</th>
         </tr>
     </table>
