@@ -13,6 +13,12 @@
             <th><a href="https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/871.%20%E6%9C%80%E4%BD%8E%E5%8A%A0%E6%B2%B9%E6%AC%A1%E6%95%B0.go">go</a>&nbsp;c++</th>
             <th>中等</th>
         </tr>
+           <tr>
+            <th>1185</th>
+            <th><a href = "https://leetcode-cn.com/classic/problems/day-of-the-week/description/">一周中的第几天</a></th>
+            <th><a href="https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/1185.%20%E4%B8%80%E5%91%A8%E4%B8%AD%E7%9A%84%E7%AC%AC%E5%87%A0%E5%A4%A9.go">go</a>&nbsp;c++</th>
+            <th>简单偏难</th>
+        </tr>
         <tr>
             <th>1237</th>
             <th><a href = "https://leetcode-cn.com/classic/problems/find-positive-integer-solution-for-a-given-equation/description/">找出给定方程的正整数解</a></th>
