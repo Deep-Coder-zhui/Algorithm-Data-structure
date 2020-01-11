@@ -96,7 +96,7 @@ func dayOfTheWeek(day int, month int, year int) string {
     return s[(7 + (6 + deltaDays) % 7) % 7] // 最后对7取余是因为：(6 + deltaDays) % 7 可以为0
 }
 
-method2 cheat
+// method2 cheat
 func dayOfTheWeek(day int, month int, year int) string {
     // time.Local即本地时区, 取决于运行的系统环境设置, 优先取”TZ”这个环境变量, 然后取/etc/localtime, 都取不到就用UTC兜底.
     // month：如果是数字可以直接传参，否则需要先显示转化为Month类型
