@@ -1,5 +1,5 @@
 # Leetcode题解
-## 主要提供`go`和`c++`两种版本，题目难度基于个人感觉定义。有志同道合的朋友可`push`其它语言版本
+## 主要提供`go`和`c++`两种版本，题目难度基于个人感觉定义。
    <table>
         <tr>
             <th>题号</th>
@@ -48,5 +48,21 @@
             <th><a href = "https://leetcode-cn.com/classic/problems/jump-game-v/description/">跳跃游戏 V</a></th>
             <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1344.%20%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%20V.go">go</a><a>&nbsp;c++</a></th>
             <th>中等偏易</th>
+        </tr>
+    </table>
+# DataBase题解
+## 主要提供`mysql`，题目难度基于个人感觉定义。
+   <table>
+        <tr>
+            <th>题号</th>
+            <th>标题</th>
+            <th>代码语言</th>
+            <th>困难程度</th>
+        </tr>
+        <tr>
+            <th>181</th>
+            <th><a href = "https://leetcode-cn.com/classic/problems/employees-earning-more-than-their-managers/description/">超过经理收入的员工</a></th>
+            <th><a href="https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/%E6%95%B0%E6%8D%AE%E5%BA%93/181.%20%E8%B6%85%E8%BF%87%E7%BB%8F%E7%90%86%E6%94%B6%E5%85%A5%E7%9A%84%E5%91%98%E5%B7%A5.sql">MySQL</a></th>
+            <th>中等</th>
         </tr>
     </table>
