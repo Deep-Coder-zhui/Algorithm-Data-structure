@@ -37,7 +37,13 @@
             <th>go&nbsp;<a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/c%2B%2B/1297.%20%E5%AD%90%E4%B8%B2%E7%9A%84%E6%9C%80%E5%A4%A7%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0.cpp">c++</a></th>
             <th>简单偏难</th>
         </tr>
-   <tr>
+        <tr>
+            <th>1339</th>
+            <th><a href = "https://leetcode-cn.com/classic/problems/maximum-product-of-splitted-binary-tree/description/">分裂二叉树的最大乘积</a></th>
+            <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/%E6%A0%91/1339.%20%E5%88%86%E8%A3%82%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E5%A4%A7%E4%B9%98%E7%A7%AF.go">go</a><a>&nbsp;c++</a></th>
+            <th>中等偏易</th>
+        </tr>
+        <tr>
             <th>1344</th>
             <th><a href = "https://leetcode-cn.com/classic/problems/jump-game-v/description/">跳跃游戏 V</a></th>
             <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1344.%20%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%20V.go">go</a><a>&nbsp;c++</a></th>
