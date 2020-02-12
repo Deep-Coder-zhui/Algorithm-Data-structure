@@ -9,6 +9,7 @@ state需要满足：
 2、与上一行：上一行座位选择不与初始座位分布冲突，本行坐人的位置左上和右上不可坐人
 最终答案为max{dp[maxrow][state]}
 时间：O(m*4^n)，空间：O(n*2^n)
+
 方法2：二分图最大独立集
 https://leetcode-cn.com/problems/maximum-students-taking-exam/solution/er-fen-tu-zui-da-du-li-ji-by-lightcml/
 ??
