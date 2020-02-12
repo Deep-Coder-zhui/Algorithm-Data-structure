@@ -49,6 +49,12 @@
             <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1344.%20%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%20V.go">go</a><a>&nbsp;c++</a></th>
             <th>中等偏易</th>
         </tr>
+   <tr>
+            <th>1349</th>
+            <th><a href = "https://leetcode-cn.com/classic/problems/maximum-students-taking-exam/description/">参加考试的最大学生数</a></th>
+            <th><a href = "https://github.com/Deep-Coder-zhui/Algorithm_Data-structure/blob/master/leetcode/golang/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/1349.%20%E5%8F%82%E5%8A%A0%E8%80%83%E8%AF%95%E7%9A%84%E6%9C%80%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%95%B0.go">go</a><a>&nbsp;c++</a></th>
+            <th>难等偏易</th>
+        </tr>
     </table>
 # DataBase题解
 ## 主要提供`mysql`，题目难度基于个人感觉定义。
