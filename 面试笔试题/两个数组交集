@@ -1,0 +1,42 @@
+/*
+arr1[] = {7, 3, 1, 7, 5}
+arr2[] = {6, 2, 5, 3} 
+output:3
+*/
+// 时间：O(nlogn)，空间：O(1)
+// 或者用unordered_map统计arr1和arr2中较小数组，然后用另一个数组遍历，根据是否在对方数组中存在获得交集
+typedef node struct {
+	int val;
+  	node *next;
+  	node(int x, node *_next = NULL) : val(x), next(_next) {}
+};
+
+template<class T>
+int length(T& arr)
+{
+	//cout << sizeof(arr[0]) << endl;
+	//cout << sizeof(arr) << endl;
+	return sizeof(arr) / sizeof(arr[0]);
+}
+// 因为不知道返回的结果数，用vector或list都可（但显然vector更方便啊）
+node* getIntersection(int *arr1, int *arr2) {
+  sort(arr1);
+  sort(arr2);
+  // c++的，他不会自动释放，要手动释放，因此，你可以记住这个地址，在函数其他地方都可以使用.
+  node *head = new(0);
+  node *p = head;
+  int i = 0, j = 0;
+  // c++ 没有arr.size()，这是vector用法，应该是sizeof(arr)/sizeof(arr[0])
+  while(i < length(arr1) && j < length(arr2) {
+  	if(arr1[i] > arr2[j]) {
+    	j++;
+    } else if(arr1[i] == arr2[j]) {
+    	p->next = new(arr1[i]);
+      	p = p->next;
+      	i++, j++;
+    } else {
+    	i++;
+    }
+  }
+  return head->next;
+}   
