@@ -5,13 +5,14 @@
 
 2）从S的尾部删除一个字符，加入T的尾部
 
-
 T初始为空串，使得构造的T的字典序尽可能小，
+
 INPUT:
 ACDBC---> ACBCD
 ACDBCB--->ABCBCD
 EDCBDE--->EDBCDE（**）
 AABCAA--->AAAABC
+
 */
 package main
 
