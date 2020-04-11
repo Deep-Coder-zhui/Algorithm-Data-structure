@@ -1,0 +1,57 @@
+/*
+给定字符串S，可以反复进行如下两种操作，构造字符串T：
+
+1）从S的头部删除一个字符，加入T的尾部
+
+2）从S的尾部删除一个字符，加入T的尾部
+
+
+T初始为空串，使得构造的T的字典序尽可能小，
+INPUT:
+ACDBC---> ACBCD
+ACDBCB--->ABCBCD
+EDCBDE--->EDBCDE（**）
+AABCAA--->AAAABC
+*/
+package main
+
+import (
+    "fmt"
+)
+
+func getT(s string) string {
+    if len(s) == 0 {
+        return s
+    }
+    i, j := 0, len(s)-1
+    T := []byte{}
+    for i < j {
+        curi, curj := i, j
+        for curi < curj && s[curi] == s[curj] { // 核心部分
+            curi++
+            curj--
+        }
+        if curi == curj || s[curi] < s[curj] {
+            T = append(T, s[i])
+            i++
+            continue
+        }   
+        T = append(T, s[j])
+        j--
+    }
+    if i == j {
+        T = append(T, byte(s[i]))
+    }
+    return string(T)
+}
+
+func main() {
+    s := ""
+    for true {
+        n, _ := fmt.Scan(&s)
+        if n == 0 {
+            break
+        }
+        fmt.Println(getT(s));
+    }
+}
