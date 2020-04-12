@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cstdio>
+
+using namespace std;
+#define N 100005
+
+int t, n;
+int a[N], b[N];
+
+int main() {
+    scanf("%d",&t);
+    while(t--) {
+        scanf("%d",&n);
+        for(int i = 0; i < n; i++) scanf("%d",&a[i]);
+        for(int i = 0; i < n; i++) scanf("%d",&b[i]);
+        bool ans = true;
+        int ti = 0;
+        while(ti < n && a[ti] == b[ti]) ti++;
+        if(ti != n) {
+            int k = b[ti]-a[ti];
+            if(k < 0) {
+                ans = false;
+            } else {
+                while(++ti < n && a[ti]+k==b[ti]);
+                while(ti != n && a[ti]==b[ti]) { // 只有中间某个范围需要加k
+                    ti++;
+                }
+                if(ti!=n) ans = false;
+            }
+        }
+//        cout << boolean(ans << '\n';
+        cout << (ans ? "YES" : "NO") << '\n';
+    }
+    return 0;
+}
