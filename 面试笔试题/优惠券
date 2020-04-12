@@ -1,0 +1,33 @@
+/*
+a[n]优惠券价格，b[m]商品的价格，只要a[i]<=b[j]，此优惠券就可使用，且可重复使用，问最少花费？
+*/
+include<bits/stdc++.h>
+using namespace std;
+const int maxn = 1e6+5;
+
+int a[maxn],b[maxn];
+int n,m;
+int fin(int x){
+    int l = 0,r = n+1;
+    for(int i=0;i<50;++i) { // 防止死循环
+        int mid=(l+r)/2;
+        if(a[mid]>x)r=mid;
+        else l=mid;
+    }
+    return l;
+}
+int main() {
+  //  int n,m;
+    cin>>n>>m;
+    for(int i=1;i<=n;++i)scanf("%d",&a[i]);
+    for(int i=1;i<=m;++i)scanf("%d",&b[i]);
+    sort(a+1,a+1+n);
+    sort(b+1,b+1+m); // 必要？
+    long long int  ans(0); // 数据越界
+    for(int i=1;i<=m;++i){
+        int id = fin(b[i]); // 返回id为0表示优惠券无法使用
+        ans+=b[i]-a[id];
+    }
+    cout<<ans;
+    return 0;
+}
