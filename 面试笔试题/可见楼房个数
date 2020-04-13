@@ -1,0 +1,55 @@
+/*
+a为楼房高度数组，求站在a[i]屋顶能看到的的楼房个数（不包括自身，当前面的楼的高度【大于】(区别于>=)后面的楼时，后面的楼将被挡住）
+
+单调递减栈 + 单调递增栈
+时间：O(n), 空间：O(n)
+
+*/
+
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+    var n int
+    fmt.Scan(&n)
+    ans, building := make([]int, n), make([]int, n)
+    // 模拟栈
+    dec, inc := make([]int, n), make([]int, n)
+    top1, top2 := 0, 0
+
+    for i := 0; i < n; i++ {
+        fmt.Scan(&building[i])
+    }
+
+    for i := 0; i < n; i++ {
+        ans[i] += top1 // building[0...i-1]
+        if i > 0 && building[i] > dec[top1-1] {
+            for top1 >= 1 && building[i] > dec[top1-1] {
+                top1--
+            }
+        }
+        dec[top1] = building[i]
+        top1++
+    }
+    for i := n-1; i &gt;= 0; i-- {
+        ans[i] += top2 // building[i+1...n-1]
+        if i < n-1 && building[i] > inc[top2-1] {
+            for top2 >= 1 && building[i] > inc[top2-1] {
+                top2--
+            }
+        }
+        inc[top2] = building[i]
+        top2++
+    }
+
+    for i := 0; i < n; i++ {
+        if i == n-1 {
+            fmt.Println(ans[i])
+        } else {
+            fmt.Print(ans[i], " ")
+        }
+    }
+}
