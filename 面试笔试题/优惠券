@@ -22,7 +22,7 @@ int main() {
     for(int i=1;i<=n;++i)scanf("%d",&a[i]);
     for(int i=1;i<=m;++i)scanf("%d",&b[i]);
     sort(a+1,a+1+n);
-    sort(b+1,b+1+m); // 必要？
+   // sort(b+1,b+1+m); // 不必要
     long long int  ans(0); // 数据越界
     for(int i=1;i<=m;++i){
         int id = fin(b[i]); // 返回id为0表示优惠券无法使用
