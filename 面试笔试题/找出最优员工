@@ -1,0 +1,89 @@
+/*
+给定员工出现频率的字符串（前面或中间可能有空格，判断合法性：员工姓名必须大写字母开头然后是一堆小写字母，各员工姓名以逗号隔开。
+最优员工为出现次数最多的员工，如果A、B出现次数一样，如A包含在B的前缀，A更优，否则以ASCII码值更小的当选）
+Tom,Lily,Tom,Lucy,Lucy,Jack
+Tom,Lily,Tom,Lucy,Lucy,Tom,Jack
+*/
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"sort"
+	"strings"
+)
+
+type node struct {
+	tic int
+	name string
+}
+
+func check(vote string) bool {
+	first := true
+	for i := 0; i < len(vote); i++ {
+		if first {
+			if !(vote[i] >= 'A' && vote[i] <= 'Z') {
+				return false
+			}
+			first = false
+		} else {
+			if !((vote[i]>='a' && vote[i]<='z') || vote[i]==',') {
+				return  false
+			}
+			if vote[i] == ',' {
+				first = true
+			}
+		}
+	}
+	return true
+}
+
+func main() {
+	var vote string
+	//fmt.Scan("%s", &vote) // error: 那是Scanf
+	//fmt.Scan(&vote) // 不能接收空格
+	inputReader := bufio.NewReader(os.Stdin)
+	// 方法1
+	vote, _ = inputReader.ReadString('\n')
+	// 方法2
+	//s, _, _ := inputReader.ReadLine()
+	//vote = string(s)
+
+	if check(vote) {
+		ticket := make(map[string]int)
+		i := 0
+		for true {
+			j := i
+			for j<len(vote) && vote[j]!=',' {
+				j++
+			}
+			ticket[vote[i:j]]++ // vote[i:j]表示取i~j-1之间的元素
+			if j == len(vote) {
+				break
+			}
+			i = j+1 //
+		}
+		last := []node{}
+		for k, v := range ticket {
+			last = append(last, node{v,k})
+		}
+		sort.Slice(last, func(i, j int) bool {
+			if last[i].tic > last[j].tic {
+				return true
+			}
+			if last[i].tic == last[j].tic {
+				if strings.HasPrefix(last[j].name, last[i].name) {
+					return true
+				}
+				if !strings.HasPrefix(last[i].name, last[j].name) && last[i].name < last[j].name {
+					return true
+				}
+			}
+			return false
+		})
+		fmt.Println(last[0].name)
+	} else {
+		fmt.Println("error.0.001")
+	}
+}
