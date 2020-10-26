@@ -1,3 +1,4 @@
+// 判断对数组a的[l, r]范围加k(>=0)可否得到数组b
 #include<iostream>
 #include<cstdio>
 
@@ -28,7 +29,7 @@ int main() {
                 if(ti!=n) ans = false;
             }
         }
-//        cout << boolean(ans << '\n';
+//        cout << boolalpha << ans << '\n';
         cout << (ans ? "YES" : "NO") << '\n';
     }
     return 0;
