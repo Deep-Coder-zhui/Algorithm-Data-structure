@@ -29,10 +29,10 @@ int breakNum(vector<int>& nums)
     for (int i = nums.size() - 2; i >= 0; i--) // 从后往前遍历，这样更前面的木棍折断不影响后面的结果
     {
         if (nums[i + 1] >= nums[i]) continue;
-        // 将当前木棒均匀折断成若干小于等于下一个的小木棒
-        int t = (nums[i] - 1) / nums[i + 1]; // 折t次（如nums[i+1]=1）
+        // 当前木棒折断成不大于nums[i+1]需要的最少次数（减1：（13，6））
+        int t = (nums[i] - 1) / nums[i + 1]; 
         ans += t;
-        nums[i] /= (t + 1); // 变成t根木棍
+        nums[i] /= (t + 1); // （t+1）根木棍，最左边木棍长度
     }
     return ans;
 }
