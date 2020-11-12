@@ -1,9 +1,3 @@
-/*
-给定员工出现频率的字符串（前面或中间可能有空格，判断合法性：员工姓名必须大写字母开头然后是一堆小写字母，各员工姓名以逗号隔开。
-最优员工为出现次数最多的员工，如果A、B出现次数一样，如A包含在B的前缀，A更优，否则以ASCII码值更小的当选）
-Tom,Lily,Tom,Lucy,Lucy,Jack
-Tom,Lily,Tom,Lucy,Lucy,Tom,Jack
-*/
 package main
 
 import (
@@ -49,7 +43,7 @@ func main() {
 	// 方法2
 	//s, _, _ := inputReader.ReadLine()
 	//vote = string(s)
-
+	vote = strings.Replace(vote, " ", "", -1) // 去掉空格
 	if check(vote) {
 		ticket := make(map[string]int)
 		i := 0
@@ -73,6 +67,7 @@ func main() {
 				return true
 			}
 			if last[i].tic == last[j].tic {
+				// 这两处判断要特别注意
 				if strings.HasPrefix(last[j].name, last[i].name) {
 					return true
 				}
